@@ -17,6 +17,10 @@ namespace UnityDemo
 
             c.Run();
             Console.ReadLine();
+            c.Run();
+            Console.ReadLine();
+            c.Run();
+            Console.ReadLine();
         }
     }
 }

@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace UnityDemo
 {
-    public class Service1 : IService1
+    public class Service1Another : IService1
     {
+        private object _service4;
+
         public string Uid { get; }
 
-        public Service1()
+        public Service1Another(Service4 service)
         {
-            Uid = Guid.NewGuid().ToString();
+            _service4 = service;
+            Uid = "bla bla bla" + service.Uid;
         }
-
     }
 }

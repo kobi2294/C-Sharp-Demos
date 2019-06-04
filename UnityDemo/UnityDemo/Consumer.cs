@@ -11,7 +11,7 @@ namespace UnityDemo
     {
         private Printer _printer;
         private Logger _logger;
-        private Service1 _service1;
+        private IService1 _service1;
         private Func<ChildConsumer> _childFactory;
         private Service3 _service3;
 
@@ -21,7 +21,7 @@ namespace UnityDemo
         public Consumer(
             Printer printer, 
             Logger logger, 
-            Service1 service1, 
+            IService1 service1, 
             Func<ChildConsumer> childFactory
             )
         {

@@ -54,10 +54,12 @@
   <ItemGroup>
     <Compile Include="ChildConsumer.cs" />
     <Compile Include="Consumer.cs" />
+    <Compile Include="IService1.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Printer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service1Another.cs" />
     <Compile Include="Service2.cs" />
     <Compile Include="Service3.cs" />
     <Compile Include="Service4.cs" />

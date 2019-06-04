@@ -4,22 +4,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Unity;
+using Unity.Lifetime;
 
 namespace UnityDemo
 {
     class Program
     {
-        static void Main(string[] args)
+        private static Consumer _consumer;
+
+        private static void Bootstrap()
         {
             var uc = new UnityContainer();
 
-            var c = uc.Resolve<Consumer>();
+            uc.RegisterType<IService1, Service1Another>(new ContainerControlledLifetimeManager());
+            uc.RegisterType<Service2>(new ContainerControlledLifetimeManager());
+            uc.RegisterType<Service3>(new ContainerControlledLifetimeManager());
+            uc.RegisterType<Service4>(new ContainerControlledLifetimeManager());
 
-            c.Run();
+
+
+            _consumer = uc.Resolve<Consumer>();
+        }
+
+
+        static void Main(string[] args)
+        {
+            Bootstrap();
+
+            _consumer.Run();
             Console.ReadLine();
-            c.Run();
+            _consumer.Run();
             Console.ReadLine();
-            c.Run();
+            _consumer.Run();
             Console.ReadLine();
         }
     }

@@ -1,6 +1,8 @@
 using System;
 
 using Unity;
+using Unity.Lifetime;
+using UnityWebApiDemo.Services;
 using UnityWebApiDemo.Utils;
 
 namespace UnityWebApiDemo
@@ -42,6 +44,7 @@ namespace UnityWebApiDemo
             // container.LoadConfiguration();
 
             container.RegisterType<IResolver, UnityResolver>();
+            container.RegisterType<INumbersService, NumbersService>(new ContainerControlledLifetimeManager());
         }
     }
 }

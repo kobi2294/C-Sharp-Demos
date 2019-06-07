@@ -2,6 +2,7 @@ using System;
 
 using Unity;
 using Unity.Lifetime;
+using UnityWebApiDemo.Models;
 using UnityWebApiDemo.Services;
 using UnityWebApiDemo.Utils;
 
@@ -45,6 +46,7 @@ namespace UnityWebApiDemo
 
             container.RegisterType<IResolver, UnityResolver>();
             container.RegisterType<INumbersService, NumbersService>(new ContainerControlledLifetimeManager());
+            container.RegisterType<Transaction>(new HierarchicalLifetimeManager());
         }
     }
 }

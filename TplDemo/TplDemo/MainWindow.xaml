@@ -1,0 +1,35 @@
+﻿<Window x:Class="TplDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TplDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <TextBlock Text="Calculate Primes" FontSize="24" Foreground="Navy"
+                   DockPanel.Dock="Top" HorizontalAlignment="Center"
+                   />
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+            <Button Margin="8" Padding="4" Click="Button_Click">Calculate!</Button>
+        </StackPanel>
+
+        <TextBlock 
+            x:Name="statusText"
+            Text="Click calculate to start" DockPanel.Dock="Top"  
+            FontSize="16" Margin="10"            
+            />
+
+        <ProgressBar 
+            x:Name="progressBar"
+            DockPanel.Dock="Top" Height="16" 
+            Minimum="0" Maximum="100" 
+            IsIndeterminate="False"
+            />
+
+        <ListBox
+            x:Name="resultsList"
+            ></ListBox>
+
+    </DockPanel>
+</Window>

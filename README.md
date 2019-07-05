@@ -1,2 +1,2 @@
-# Unity-dI-Demo
-Demo project illustrating how to use Unity DI Container
+# C# Demos
+Demo projects illustrating how to use various topics in C#
